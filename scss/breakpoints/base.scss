@@ -1,0 +1,70 @@
+
+// Base Classes
+
+.non-semantic-protector { 
+    position: relative; 
+    z-index: 1; 
+}
+
+html {
+    font-size: 1em;
+
+    // 1em = 16px; Adjust if you want a different baseline.
+}
+
+body {
+    color: #333333;
+    font-size: 100%;
+    font-family: $sans;
+    line-height: 1.5;
+    overflow-x: hidden;
+
+    // Adjust for your type
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// responsive images by default
+img {
+    width: 100%;
+    height: auto;
+}
+
+// makes button styling more flexible
+button {
+    display: block;
+}
+
+// add this to any link container
+.fullwidth {
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    padding-left:0;
+    padding-right:0;
+    display:block;
+    text-align:center; /*This will result in centering the link text, which is probably what you want -brianjohnsondesign.com*/
+}
+
+// Mobile page wrap
+.wrap {
+    margin: 0 auto;
+    width: 96%;
+}
+
+// Sets default fonts, override in classes in necessary
+body {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $roboto;
+    }
+    p {
+        font-family: $roboto;
+        font-weight: normal;
+        i {
+            font-style: italic;
+        }
+        b {
+            font-weight: bold;
+        }
+    }
+}

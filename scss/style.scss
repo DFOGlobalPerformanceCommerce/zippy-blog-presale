@@ -1,0 +1,45 @@
+// Imports normalize
+@import "partials/normalize";
+
+// Imports variables
+@import "partials/variables";
+// Import typography
+@import "partials/typography";
+
+// Imports our breakpoints for mobile, tablet, and desktop.
+// put as much in Base as you can, then change things
+// for tablet/desktop/etc in the other breakpoints.
+
+// Base - Mobile Styles
+// -- styles in base.scss --
+@import "breakpoints/base";
+
+// Larger Mobile Devices
+@media only screen and (min-width: 481px) {
+    // styles in 481up.scss
+    @import "breakpoints/481up";
+}
+
+// Below Tablet
+@media only screen and (max-width: 767px) {
+    // styles in 767down.scss
+    @import "breakpoints/767down";
+}
+
+// Tablets & Small Laptops
+@media only screen and (min-width: 768px) {
+    // styles in 768up.scss
+    @import "breakpoints/768up";
+}
+
+// Desktop
+@media only screen and (min-width: 1030px) {
+    // styles in 1030up.scss
+    @import "breakpoints/1030up";
+}
+
+// Retina Displays
+@media only screen and (min-width: 1240px) {
+    // styles in 1240up.scss
+    @import "breakpoints/1240up";
+}
