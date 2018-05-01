@@ -588,6 +588,9 @@ body p {
   .content-wrap-inner .blog {
     width: calc(70% - 1em);
     margin-right: 1em; }
+    .content-wrap-inner .blog .article-date {
+      margin: 1em 0;
+      font-size: .9em; }
     .content-wrap-inner .blog .zipcode-cta {
       padding: 3em;
       text-align: center;
@@ -659,10 +662,14 @@ body p {
   .wrap {
     width: 98%;
     margin: 0 auto; }
+  .header .header-inner .nav-bar span {
+    padding-left: .5em; }
   .content-wrap-inner {
     display: flex; }
     .content-wrap-inner .blog {
       width: 100%; }
+      .content-wrap-inner .blog h1 {
+        font-size: 2em; }
       .content-wrap-inner .blog .zipcode-cta {
         padding: 1em;
         text-align: center; }

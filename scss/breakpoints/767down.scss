@@ -3,10 +3,23 @@
     margin: 0 auto;
 }
 
+.header {
+    .header-inner {
+        .nav-bar {
+            span {
+                padding-left: .5em;
+            }
+        }
+    }
+}
+
 .content-wrap-inner {
     display: flex;
     .blog {
         width: 100%;
+        h1 {
+            font-size: 2em;
+        }
         .zipcode-cta {
             padding: 1em;
             text-align: center;

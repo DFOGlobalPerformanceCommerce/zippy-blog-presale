@@ -170,6 +170,10 @@ body {
     .blog {
         width: calc(70% - 1em);
         margin-right: 1em;
+        .article-date {
+            margin: 1em 0;
+            font-size: .9em;
+        }
         .zipcode-cta {
             padding: 3em;
             text-align: center;
