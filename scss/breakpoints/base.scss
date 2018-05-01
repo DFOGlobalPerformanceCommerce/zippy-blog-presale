@@ -35,6 +35,22 @@ button {
     display: block;
 }
 
+//Resp Vid 
+
+.responsive-video {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    iframe {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+}
+
 // add this to any link container
 .fullwidth {
     width:100%;
@@ -55,9 +71,12 @@ button {
 // Sets default fonts, override in classes in necessary
 body {
     h1, h2, h3, h4, h5, h6 {
+        font-family: $oswald;
     }
     p {
         font-weight: normal;
+        font-family: $sourcesans;
+        font-size: 1.3em;
         i {
             font-style: italic;
         }
@@ -65,4 +84,174 @@ body {
             font-weight: bold;
         }
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    .modal-window {
+        background-color: white;
+        padding: 5em;
+        position: relative;
+        .close-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-weight: bold;
+            padding: .3em .5em;
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+        .modal-text {
+            text-align: center;
+        }
+        .modal-cta {
+            text-align: center;
+        }
+        h2 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 3em;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(81, 180, 21);
+            width: 100%;
+            margin: 0 0 1em 0;
+            padding: .5em;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+    }
+}
+.modal-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    .header-inner {
+        .advertorial-bar {
+            background-color: #273C51;
+            text-align: center;
+            color: white;
+        }
+        .nav-bar {
+            background-color: #344A5F;
+            padding: 1em 0;
+            span {
+                font-size: 2em;
+                padding-left: 1em;
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    padding: .5em 0;
+    color: gray;
+}
+
+.content-wrap-inner {
+    display: flex;
+    .blog {
+        width: calc(70% - 1em);
+        margin-right: 1em;
+        .zipcode-cta {
+            padding: 3em;
+            text-align: center;
+            background-color: lighten($color: #344A5F, $amount: 20);
+            margin: 2em 0;
+            .zipcode-cta-inner {
+                h2 {
+                    margin: 0 0 2em 0;
+                    color: white;
+                    text-transform: uppercase;
+                }
+                #zip-input {
+                    padding: .5em;
+                    height: 70px;
+                    width: 300px;
+                    border: 1px solid black;
+                    outline: none;
+                    text-align: center;
+                    font-size: 1.4em;
+                }
+                #submit-button {
+                    margin-top: 2em;
+                    padding: 1em;
+                    background-color: rgb(81, 180, 21);
+                    font-size: 1.5em;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0 5px #347E07;
+                    cursor: pointer;
+                }
+                #loader {
+                    display: none;
+                    h3 {
+                        color: white;
+                    }
+                }
+                .loading {
+                    height: 40px;
+                    width: 70%;
+                    margin: 0 auto;
+                    background-color: gray;
+                    margin-top: 2em;
+                    #loading {
+                        background-color: rgb(81, 180, 21); 
+                    }
+                }
+            }
+        }
+    }
+    .sidebar {
+        width: calc(30% - 1em);
+        margin-left: 1em;
+    }
+}
+
+.footer {
+    background-color: #344A5F;
+    .footer-inner {
+        text-align: center;
+        padding: 1em;
+        color: white;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                color: white;
+                padding: 0 .5em;
+            }
+        }
+        p {
+            font-size: .8em;
+        }
+    }
+}
+
+.cta-button {
+    margin: 0 auto;
 }

@@ -2,3 +2,55 @@
     width: 98%;
     margin: 0 auto;
 }
+
+.content-wrap-inner {
+    display: flex;
+    .blog {
+        width: 100%;
+        .zipcode-cta {
+            padding: 1em;
+            text-align: center;
+            .zipcode-cta-inner {
+                #zip-input {
+                    padding: .5em;
+                    height: 70px;
+                    width: 80%;
+                    border: 1px solid black;
+                    outline: none;
+                    text-align: center;
+                    font-size: 1.2em;
+                }
+                #submit-button {
+                    width: 100%;
+                    padding: 1em;
+                    background-color: green;
+                    font-size: 1em;
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 15px;
+                    box-shadow: 0 5px lightgreen;
+                    cursor: pointer;
+                    margin-bottom: 2em;
+                }
+                #loader {
+                    display: none;
+                }
+                .loading {
+                    height: 40px;
+                    width: 70%;
+                    margin: 0 auto;
+                    background-color: gray;
+                    margin-top: 2em;
+                    #loading {
+                        background-color: green; 
+                    }
+                }
+            }
+        }
+    }
+    .sidebar {
+        display: none;
+    }
+}

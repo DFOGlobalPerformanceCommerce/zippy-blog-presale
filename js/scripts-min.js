@@ -292,3 +292,5 @@ const geoText = continent.find( text => text.countryCode === currentGeo);
 $(document).ready(function() {
     $('#dynamicGeo').text(geoText.countryText);
 });
+
+

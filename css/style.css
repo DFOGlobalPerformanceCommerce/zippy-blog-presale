@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700|Source+Sans+Pro:400,400i,700");
 html {
   line-height: 1.15;
   /* 1 */
@@ -479,6 +480,18 @@ img {
 button {
   display: block; }
 
+.responsive-video {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+  .responsive-video iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+
 .fullwidth {
   width: 100%;
   margin-left: 0;
@@ -493,17 +506,199 @@ button {
   margin: 0 auto;
   width: 96%; }
 
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Oswald", sans-serif; }
+
 body p {
-  font-weight: normal; }
+  font-weight: normal;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3em; }
   body p i {
     font-style: italic; }
   body p b {
     font-weight: bold; }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6); }
+  .modal .modal-window {
+    background-color: white;
+    padding: 5em;
+    position: relative; }
+    .modal .modal-window .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      padding: .3em .5em;
+      font-size: 1.3em;
+      cursor: pointer; }
+    .modal .modal-window .modal-text {
+      text-align: center; }
+    .modal .modal-window .modal-cta {
+      text-align: center; }
+    .modal .modal-window h2 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 3em; }
+    .modal .modal-window a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      background-color: #51b415;
+      width: 100%;
+      margin: 0 0 1em 0;
+      padding: .5em;
+      font-size: 2em;
+      text-transform: uppercase; }
+
+.modal-active {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header .header-inner .advertorial-bar {
+  background-color: #273C51;
+  text-align: center;
+  color: white; }
+
+.header .header-inner .nav-bar {
+  background-color: #344A5F;
+  padding: 1em 0; }
+  .header .header-inner .nav-bar span {
+    font-size: 2em;
+    padding-left: 1em;
+    color: white;
+    text-transform: uppercase; }
+
+.breadcrumbs {
+  padding: .5em 0;
+  color: gray; }
+
+.content-wrap-inner {
+  display: flex; }
+  .content-wrap-inner .blog {
+    width: calc(70% - 1em);
+    margin-right: 1em; }
+    .content-wrap-inner .blog .zipcode-cta {
+      padding: 3em;
+      text-align: center;
+      background-color: #587da1;
+      margin: 2em 0; }
+      .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner h2 {
+        margin: 0 0 2em 0;
+        color: white;
+        text-transform: uppercase; }
+      .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #zip-input {
+        padding: .5em;
+        height: 70px;
+        width: 300px;
+        border: 1px solid black;
+        outline: none;
+        text-align: center;
+        font-size: 1.4em; }
+      .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #submit-button {
+        margin-top: 2em;
+        padding: 1em;
+        background-color: #51b415;
+        font-size: 1.5em;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #347E07;
+        cursor: pointer; }
+      .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #loader {
+        display: none; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #loader h3 {
+          color: white; }
+      .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner .loading {
+        height: 40px;
+        width: 70%;
+        margin: 0 auto;
+        background-color: gray;
+        margin-top: 2em; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner .loading #loading {
+          background-color: #51b415; }
+  .content-wrap-inner .sidebar {
+    width: calc(30% - 1em);
+    margin-left: 1em; }
+
+.footer {
+  background-color: #344A5F; }
+  .footer .footer-inner {
+    text-align: center;
+    padding: 1em;
+    color: white; }
+    .footer .footer-inner ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .footer .footer-inner ul a {
+        color: white;
+        padding: 0 .5em; }
+    .footer .footer-inner p {
+      font-size: .8em; }
+
+.cta-button {
+  margin: 0 auto; }
+
 @media only screen and (max-width: 767px) {
   .wrap {
     width: 98%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .content-wrap-inner {
+    display: flex; }
+    .content-wrap-inner .blog {
+      width: 100%; }
+      .content-wrap-inner .blog .zipcode-cta {
+        padding: 1em;
+        text-align: center; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #zip-input {
+          padding: .5em;
+          height: 70px;
+          width: 80%;
+          border: 1px solid black;
+          outline: none;
+          text-align: center;
+          font-size: 1.2em; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #submit-button {
+          width: 100%;
+          padding: 1em;
+          background-color: green;
+          font-size: 1em;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          border: none;
+          border-radius: 15px;
+          box-shadow: 0 5px lightgreen;
+          cursor: pointer;
+          margin-bottom: 2em; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner #loader {
+          display: none; }
+        .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner .loading {
+          height: 40px;
+          width: 70%;
+          margin: 0 auto;
+          background-color: gray;
+          margin-top: 2em; }
+          .content-wrap-inner .blog .zipcode-cta .zipcode-cta-inner .loading #loading {
+            background-color: green; }
+    .content-wrap-inner .sidebar {
+      display: none; } }
 
 @media only screen and (min-width: 768px) {
   .wrap {
